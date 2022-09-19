@@ -1,0 +1,1 @@
+${hostname} ansible_host=${privateip} ansible_ssh_user=root ansible_ssh_pass=${rootpwd}
