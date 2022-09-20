@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     ncloud = {
-      source = "NaverCloudPlatform/ncloud"
+      source  = "NaverCloudPlatform/ncloud"
       version = "2.3.0"
     }
   }
@@ -27,7 +27,7 @@ terraform {
 # variable
 provider "ncloud" {
   access_key  = var.access_key
-  secret_key  = var.secret_key  
+  secret_key  = var.secret_key
   region      = var.region
   site        = var.site
   support_vpc = var.support_vpc
@@ -41,5 +41,5 @@ resource "ncloud_vpc" "prod" {
 
 #ncloud server login key
 resource "ncloud_login_key" "prod" {
-  key_name    = "prod"
+  key_name = "prod"
 }

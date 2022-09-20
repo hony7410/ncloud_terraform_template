@@ -10,7 +10,7 @@ resource "ncloud_access_control_group" "prod-acg" {
 # webserver 용 ACG 룰 적용
 resource "ncloud_access_control_group_rule" "web-acg" {
   access_control_group_no = ncloud_access_control_group.prod-acg["web-acg"].id
-  
+
   inbound {
     protocol    = "TCP"
     ip_block    = "0.0.0.0/0"

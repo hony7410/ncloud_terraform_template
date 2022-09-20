@@ -16,7 +16,7 @@ resource "ncloud_server" "prod-server" {
   subnet_no      = ncloud_subnet.prod-subnet["${each.value.subnet_name}"].id
   login_key_name = ncloud_login_key.prod.key_name
 
-  name = each.key
+  name                      = each.key
   server_image_product_code = (each.value.server_image == null ? null : var.server_images["${each.value.server_image}"])
   server_product_code       = var.server_specs["${each.value.spec}"]
   member_server_image_no    = try(each.value.member_server_image_no, null)
